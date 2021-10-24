@@ -1,0 +1,26 @@
+---------------------------
+直接上手使用
+
+1.小车开机，连接WIFI，密码：dongguan
+
+2.SSH远程登录：ssh wheeltec@192.168.0.100，密码：dongguan
+
+3.把小车放置在地图起点/rviz手动设置起点
+
+4.运行导航：
+roslaunch turn_on_wheeltec_robot navigation.launch
+
+5.运行rviz(passoni终端)：
+rviz
+
+6.rviz添加path_ponit(MarkerArray数据格式)话题订阅，进行可视化
+
+7.使用rviz的Publish Point功能
+
+---------------------------
+多点导航程序实现讲解
+1.节点话题结构，大致工作过程。
+2.程序源码send_mark.py
+
+0 1 2 3
+正在前往点3，index=3+1
