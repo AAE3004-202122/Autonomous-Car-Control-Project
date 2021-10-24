@@ -1,0 +1,28 @@
+-----------
+直接上手使用
+
+1.小车开机，连接WIFI，密码：dongguan。
+
+2.SSH远程登录：ssh wheeltec@192.168.0.100，密码：dongguan
+
+3.启动初始化节点(wheeltec终端)：
+roslaunch turn_on_wheeltec_robot turn_on_wheeltec_robot.launch
+
+4.按键控制(wheeltec终端)：
+roslaunch wheeltec_robot_rc keyboard_teleop.launch
+
+-----------
+工作过程讲解
+
+1.小海龟
+roscore
+rosrun turtlesim turtlesim_node
+rosrun turtlesim turtle_teleop_key
+
+2.查看节点话题
+rqt_graph
+
+3.NFS挂载查看程序
+sudo mount -t nfs 192.168.0.100:/home/wheeltec/wheeltec_robot /mnt
+
+
