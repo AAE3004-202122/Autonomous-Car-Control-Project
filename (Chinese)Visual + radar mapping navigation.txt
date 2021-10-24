@@ -1,0 +1,14 @@
+①在 虚拟机/ubuntu电脑 端也安装rtabmap功能包
+sudo apt-get update (更新软件列表)
+sudo apt-get install ros-melodic-rtabmap-ros（安装rtabmap）
+
+②跑官方测试包（可选）
+roslaunch rtabmap_ros demo_robot_mapping.launch rviz:=true rtabmapviz:=false （官方测试例程）
+rosbag play --clock demo_mapping.bag （官方测试包，在/home/wheeltec/的路径下执行）
+
+③建图
+roslaunch turn_on_wheeltec_robot 3d_mapping.launch（启动3d建图）
+roslaunch wheeltec_robot_rc keyboard_teleop.launch  （启动键盘控制节点）
+
+④导航
+roslaunch  turn_on_wheeltec_robot 3d_navigation.launch（启动3d导航）
