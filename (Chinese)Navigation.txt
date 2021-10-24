@@ -1,0 +1,37 @@
+---------------------------
+直接上手使用
+
+1.小车开机，连接WIFI，密码：dongguan
+
+2.SSH远程登录：ssh wheeltec@192.168.0.100，密码：dongguan
+
+3.把小车放置在地图起点/rviz手动设置起点
+
+4.运行导航：
+roslaunch turn_on_wheeltec_robot navigation.launch
+
+5.运行rviz(passoni终端)：
+rviz
+
+6.使用rviz的2DNavGoal功能
+
+小车不运动同时没有路径规划显示：检查.bashrc文件ip地址()
+
+---------------------------
+额外补充和launch文件讲解
+
+1.地图文件
+
+2.手动发布目标点
+rostopic pub /move_base_simple/goal
+四元数
+x  = ax * sin(theta/2)    
+y  = ay * sin(theta/2)    
+z  = 1* sin(180°/2)  =1
+w = cos(180°/2)  =0
+
+3.navigation.launch
+
+--------------------------
+整体导航工作原理与参数配置讲解
+navigation_stack
