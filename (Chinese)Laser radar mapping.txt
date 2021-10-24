@@ -1,0 +1,22 @@
+1.小车开机，连接WIFI，密码：dongguan。
+
+2.SSH远程登录：ssh wheeltec@192.168.0.100，密码：dongguan
+
+3.启动激光建图
+roslaunch turn_on_wheeltec_robot mapping.launch 
+查看建图效果：rviz(passoni)
+可以使用键盘控制、APP遥控、PS2遥控、航模遥控进行控制小车运动。
+
+
+4.建图完成，保存地图
+  ①一键保存：roslaunch turn_on_wheeltec_robot map_saver.launch 
+  ②打开地图路径：cd /home/wheeltec/wheeltec_robot/src/turn_on_wheeltec_robot/map
+     保存地图：rosrun map_server map_saver -f 地图名
+
+注：地图文件可以使用PhotoShop进行编辑
+------------------------
+建图
+mapping.launch
+ 小车初始化节点：turn_on_wheeltec_robot.launch
+ 雷达节点：rplidar.launch
+ gmapping建图节点：algorithm_gmapping.launch
