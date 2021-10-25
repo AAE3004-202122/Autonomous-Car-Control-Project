@@ -1,0 +1,7 @@
+1. Open Mcuisp
+
+2. Connect SCM and computer
+
+3. Set serial port, baud rate, DTR low level reset, RTS high level into BL
+
+4. Select the HEX file and start downloading
